@@ -1,0 +1,11 @@
+<h1>@ forgot password section </h1>
+<% if(locals.isValid){%>
+<form action="/user/forget_updata_password/?reset_email=<%= locals.userDetaislpass.user.email %>" method="POST"> 
+    <input type="password" name="password" placeholder="please enter your password" required>
+    <input type="password" name="cnfpassword" placeholder="confirm your Password" required>
+    <input type="Submit" value="submit">
+    <%= locals.userDetaislpass %>
+</form>
+<% } else { %>
+    <h1>he man your token is expired !!</h1>
+<% } %>

@@ -1,0 +1,34 @@
+<!-- <html>
+    <head>
+        <title><%= title %></title>
+    </head>
+    <body>
+       
+        <%- include('_header'); %>
+
+        <h2>welcome@ user ui<%= title %></h2>
+
+        <%- include('_footer'); %>
+    </body>
+</html> -->
+<link rel="stylesheet" href="/css/user_profile.css">
+
+<h2>welcome@ user ui<%= title %></h2>
+<img src="<%= user.avatar %>" alt="<%= user.name %>" width="100">
+
+<% if(user.id == profile_user.id){  %>
+    <!-- if(user matches show the form ) -->
+    <form action="/user/update/<%= profile_user.id %>" enctype="multipart/form-data" method="POST" > 
+        <input type="text" name="name" placeholder="Your Name" value="<%= profile_user.name %>" required>
+        <input type="email" name="email" placeholder="Your Email" value="<%= profile_user.email %>">
+        <input type="file" name="avatar" placeholder="Profile picture" >
+        <input type="submit" value="submit">
+    </form>
+
+<%} else { %>
+    <!-- els only show the profile info -->
+    <p><%= profile_user.name %></p>
+    <p><%=profile_user.email %></p>
+    
+
+<% } %>

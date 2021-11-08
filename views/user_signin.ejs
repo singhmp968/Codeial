@@ -1,0 +1,26 @@
+<h1>@ signinpage </h1>
+<form action="/user/create-session" method="POST"> 
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <input type="Submit" value="sign in">
+</form>
+<p>
+    <!-- this is refre to  user.js router.get('/auth/google' line 26  -->
+    <a href="/user/auth/google/">Google Signin/ Signup</a> 
+    <a href="/user/forgetPassword">Forget password ?</a>
+<!--
+    if thei kind of error occour remember the we haven't declare in main index .js 
+    
+    Unknown authentication strategy "google"
+    at attempt (E:\lodDFiles\Coding Ninjas Backend\CodeialSomegitreqtocheck\node_modules\passport\lib\middleware\authenticate.js:190:39)
+    at authenticate (E:\lodDFiles\Coding Ninjas Backend\CodeialSomegitreqtocheck\node_modules\passport\lib\middleware\authenticate.js:367:7)
+    at Layer.handle [as handle_request] (E:\lodDFiles\Coding Ninjas Backend\CodeialSomegitreqtocheck\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\lodDFiles\Coding Ninjas Backend\CodeialSomegitreqtocheck\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (E:\lodDFiles\Coding Ninjas Backend\CodeialSomegitreqtocheck\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (E:\lodDFiles\Coding Ninjas Backend\CodeialSomegitreqtocheck\node_modules\express\lib\router\layer.js:95:5)
+    at E:\lodDFiles\Coding Ninjas Backend\CodeialSomegitreqtocheck\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (E:\lodDFiles\Coding Ninjas Backend\CodeialSomegitreqtocheck\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\lodDFiles\Coding Ninjas Backend\CodeialSomegitreqtocheck\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (E:\lodDFiles\Coding Ninjas Backend\CodeialSomegitreqtocheck\node_modules\express\lib\router\index.js:174:3)
+ -->
+</p>

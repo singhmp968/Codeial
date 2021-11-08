@@ -1,0 +1,16 @@
+#layout-header nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: skyblue; }
+  #layout-header nav .mini-logo {
+    margin-left: 10px; }
+    #layout-header nav .mini-logo a {
+      text-decoration: none;
+      color: white;
+      font-size: x-large; }
+  #layout-header nav .auth-links ul {
+    margin: 5% 5px;
+    display: flex;
+    list-style: none; }
+    #layout-header nav .auth-links ul li {
+      margin-right: 10px; }

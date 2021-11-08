@@ -1,0 +1,27 @@
+#layout-header{
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: skyblue;
+    
+    .mini-logo{
+        margin-left: 10px;
+        a{
+            text-decoration: none;
+            color: white;
+            font-size: x-large;
+        }
+    }
+    .auth-links{
+        ul{
+            margin: 5% 5px;
+            display: flex;
+            list-style: none;
+            li{
+                margin-right: 10px;
+                
+            }
+        }
+    }
+}
+}
