@@ -189,3 +189,10 @@
 [0mGET /js/sign_inpage.js [36m304[0m 7.418 ms - -[0m
 [0mGET /js/sign_uppage.js [36m304[0m 7.227 ms - -[0m
 [0mGET /js/chat_engine.js [36m304[0m 2.224 ms - -[0m
+[0mGET / [32m200[0m 342.184 ms - 77134[0m
+[0mGET /js/home_post.js [32m200[0m 99.307 ms - 4907[0m
+[0mGET /js/home_Post_comment.js [32m200[0m 7.835 ms - 3349[0m
+[0mGET /js/sign_uppage.js [32m200[0m 6.222 ms - 1579[0m
+[0mGET /js/sign_inpage.js [32m200[0m 11.995 ms - 1495[0m
+[0mGET /js/chat_engine.js [32m200[0m 1.669 ms - 2827[0m
+[0mGET /favicon.ico [33m404[0m 16.004 ms - 150[0m
