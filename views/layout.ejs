@@ -7,10 +7,17 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js" integrity="sha512-lOrm9FgT1LKOJRUXF3tp6QaMorJftUjowOWiDcG5GFZ/q7ukof19V0HKx/GWzXCdt9zYju3/KhBNdCLzK8b90Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
        <!-- jquery -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-        <link rel="stylesheet" href="/css/layout.css">
-      <!-- adding style using scss for header and footer files -->
-        <link rel="stylesheet" href="/css/header.css">
-        <link rel="stylesheet" href="/css/footer.css">
+        <!-- <link rel="stylesheet" href="/css/layout.css"> -->
+        <!-- <link rel="stylesheet" href="<%= assetPath('css/layout.css')%>"> -->
+        <link rel="stylesheet" href="<%= assetPath('css/layout.css') %>">
+        
+        <!-- adding style using scss for header and footer files -->
+        <!-- <link rel="stylesheet" href="/css/header.css"> -->
+        <link rel="stylesheet" href="<%= assetPath('css/header.css') %>">
+       
+        <!-- <link rel="stylesheet" href="/css/footer.css"> -->
+        <link rel="stylesheet" href="<%= assetPath('css/footer.css') %>">
+        
         <!-- whenever there ;is link tag or script tag in the body  it will automaticall put it over  <%- style %> and <%- script %>-->
         <%- style %>
     </head>

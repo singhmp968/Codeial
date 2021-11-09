@@ -2,6 +2,7 @@ const express  = require('express');
 const env = require('./config/enviroment');
 const logger = require('morgan') // clling morgan for log purpose
 const app = express();
+require('./config/view-helper')(app)
 const port = 8000;
 const expressLayout = require('express-ejs-layouts');
 const db = require('./config/mongoose');
