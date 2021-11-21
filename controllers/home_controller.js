@@ -29,9 +29,11 @@ try{
 });
     let users =await User.find({}) // getting ths list of user to display in Ui); here we are awaited user to be completed
     // and return something to the browser;
-    let listForCurrentUser = await User.findById(req.user.id);
-    console.log('current user',listForCurrentUser.friendship);
+    console.log('allusers',users);
     friendshipuser=[]
+    if(req.user){
+    let listForCurrentUser = await User.findById(req.user.id);
+    console.log('current user=>',listForCurrentUser.friendship);
     // loopig and getting the values all the user
     for(let uid of listForCurrentUser.friendship){
         //console.log('udis',uid);
@@ -39,7 +41,12 @@ try{
         //console.log('@@@ frindship',friendsuser);
         friendshipuser.push(friendsuser)
     }
-    console.log('friendshipuser',friendshipuser);
+}else{
+    friendshipuser=[]
+
+}
+    console.log('friendshipuser=>',friendshipuser);
+    
     return res.render('home',{
         title:"Codeial | Home",
         posts:posts,

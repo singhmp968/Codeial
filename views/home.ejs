@@ -40,21 +40,19 @@
 
 <section id = "user-friends">
     <h2>Friends list</h2>
+   
     <% for(u of addedfriends) {%>
-        <!-- TODO need to ad in seperate page -->
-        <a href=""><%= u.name %> <%= u._id %></a> <br><br>
+        <!-- TODO need to ad in seperate page -->       
+        <a href="/user/profile/<%= u.id %>"><%= u.name %></a> <br><br>
 
-    
     <% } %>
-    <h4>Friends</h4>
+   
+    <h4>Users</h4>
 
     <% for(u of all_users) {%>
         <!-- for displaying user profile link -->
-        <p> 
-                <% if(locals.user.id !== u.id) { %>    
-        
+        <p>           
             <a href="/user/profile/<%= u.id %>"><%= u.name %></a>
-            <% } %>
         </p>
     <% } %>
 </section>
