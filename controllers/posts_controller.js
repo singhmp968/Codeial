@@ -1,7 +1,7 @@
 const Post = require('../models/post');
 const Comment = require('../models/comment');
 module.exports.create =async function(req,res){
-   // console.log(req.user); // need to understand properly
+   // console.log(req.user); // need to understand properly !!!this is comming from passport.js setAuthenciated user check 
    try {
     let post = await  Post.create({
         content:req.body.content,
