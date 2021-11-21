@@ -18,7 +18,14 @@ const userSchema = new mongoose.Schema({
     },
     avatar : {
         type:String
-    }
+    },
+    // inorder to have super fast access
+    friendship: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref:'Friendship'
+        }
+    ]
   
 },  {
         timestamps:true // this fild is for tracking created and udated time checking

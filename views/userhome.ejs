@@ -29,6 +29,14 @@
     <!-- els only show the profile info -->
     <p><%= profile_user.name %></p>
     <p><%=profile_user.email %></p>
+    <p> 
+        <form action="/friendship/addfriend" method="post">
+            <input type="hidden" name="friendUserId" value="<%= profile_user.id %>">
+            <input type="submit" value="add friend">
+        </form>
+        <!-- <a href="/friendship/addfriend" data-method="post"> + Add friends </a> -->
+        
+    </p>
     
 
 <% } %>

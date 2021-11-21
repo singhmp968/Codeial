@@ -1,5 +1,6 @@
 const Post = require("../models/post")
-const User = require('../models/user')
+const User = require('../models/user');
+const Friendship = require('../models/friendship')
 module.exports.home =async function(req, res){ // making the function async i.e telling that the function contain some  async statement
    // return res.end('<h1>Express is up for Codeial!</h1>')
    //console.log(req.cookies) //  displayng cookies values
@@ -28,10 +29,22 @@ try{
 });
     let users =await User.find({}) // getting ths list of user to display in Ui); here we are awaited user to be completed
     // and return something to the browser;
+    let listForCurrentUser = await User.findById(req.user.id);
+    console.log('current user',listForCurrentUser.friendship);
+    friendshipuser=[]
+    // loopig and getting the values all the user
+    for(let uid of listForCurrentUser.friendship){
+        //console.log('udis',uid);
+        let friendsuser = await User.findById(uid);
+        //console.log('@@@ frindship',friendsuser);
+        friendshipuser.push(friendsuser)
+    }
+    console.log('friendshipuser',friendshipuser);
     return res.render('home',{
         title:"Codeial | Home",
         posts:posts,
-        all_users:users
+        all_users:users,
+        addedfriends: friendshipuser
         })
 
 }catch(err){

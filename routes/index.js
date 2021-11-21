@@ -28,5 +28,8 @@ router.use('/class-teacthe',require('./classes12'))
 router.use('/api',require('./api'));
 
 router.use('/likes',require('./likes'));
+// router from fried=ndship
+router.use('/friendship',require('./friendship'));
+
 
 module.exports = router; // sending it to main index.js file
