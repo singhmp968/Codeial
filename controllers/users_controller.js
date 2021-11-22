@@ -6,20 +6,37 @@ const crypto  = require('crypto');
 const ResetPassword = require('../models/reset_passwordToken');
 const forgotMailer = require('../mailers/forgotPasswordMailer');
 const forgotpasswordWorker = require('../workers/forgotemail_worher');
-
+const friendship = require('../models/friendship');
 const queue = require('../config/kue');
 
 // calling post
 //const Post = require('../models/post')
-module.exports.profile = function(req,res){
+module.exports.profile =async function(req,res){
    // return res.end('<h1>@ profile page</h1>')
-   User.findById(req.params.id,function(err,user){
 
-    return res.render('userhome',{
-        title:'user profile',
-        profile_user:user
-       })
-   });
+   let user = await  User.findById(req.params.id);
+   let isfriendOrNot = await User.findById(req.user.id);
+   console.log('user',user); 
+   
+   console.log('isfriendorNot',isfriendOrNot); 
+//    isfriendOrNot.friendship.map((item)=> {
+//        console.log('item',item);
+//        if
+//    })
+const friendOrNot = user.friendship.find((item) => item == req.user.id);
+//console.log('b=',b);
+   return res.render('userhome',{
+            title:'user profile',
+            profile_user:user,
+            friendOrNot: friendOrNot
+           })
+
+//    User.findById(req.params.id,function(err,user){
+//     return res.render('userhome',{
+//         title:'user profile',
+//         profile_user:user
+//        })
+//    });
     
 }
 

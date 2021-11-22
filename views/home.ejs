@@ -44,7 +44,7 @@
     <% for(u of addedfriends) {%>
         <!-- TODO need to ad in seperate page -->       
         <a href="/user/profile/<%= u.id %>"><%= u.name %></a> <br><br>
-
+        
     <% } %>
    
     <h4>Users</h4>
@@ -52,6 +52,7 @@
     <% for(u of all_users) {%>
         <!-- for displaying user profile link -->
         <p>           
+            
             <a href="/user/profile/<%= u.id %>"><%= u.name %></a>
         </p>
     <% } %>
