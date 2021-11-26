@@ -17,9 +17,10 @@ class PostComment {
     }
 
     createComment(postId){
-        console.log('--***-->',this);
+        console.log('--***-->',this); //here  this pointhig to post 
         let pSelf = this;
-          
+        console.log('--***-->',pSelf); //here  this pointhig to post 
+        
         //console.log('ppppoo=>',this.newCommentForm);
        this.newCommentForm.submit(function(e){
             console.log('inside')
