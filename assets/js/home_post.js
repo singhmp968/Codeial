@@ -16,7 +16,7 @@
                     let newpost = newPostDom(data.data.post,data.data); // added value
                     
                     $('#posts-list-container>ul').prepend(newpost); // here using prepend we are addint at the top not at the bottom i.e wevery ne comment will be added at the top
-                    deletePost($(' .delete-post-button', newpost));  // please Revis delete post againg
+                    deletePost($(' .delete-post-button', newpost));  // here this space impless means  .delete-post-button insede the newPost
                     new PostComment(data.data.post._id);
                     // displaying Notification for post creation
                     new Noty({
